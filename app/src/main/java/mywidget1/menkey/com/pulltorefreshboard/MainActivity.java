@@ -1,7 +1,8 @@
 package mywidget1.menkey.com.pulltorefreshboard;
 
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +10,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.widget.Button;
+
+import mywidget1.menkey.com.pulltorefreshboard.refreshlist1.XListViewActivity;
+
+import static android.view.View.OnClickListener;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -53,6 +58,8 @@ public class MainActivity extends ActionBarActivity {
      */
     public static class PlaceholderFragment extends Fragment {
 
+        Button btn1;
+
         public PlaceholderFragment() {
         }
 
@@ -60,7 +67,22 @@ public class MainActivity extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            btn1 = (Button)rootView.findViewById(R.id.button1);
             return rootView;
         }
+
+        @Override
+        public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+            super.onActivityCreated(savedInstanceState);
+            btn1.setOnClickListener(new OnClickListener(){
+
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity().getBaseContext(), XListViewActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
     }
 }
