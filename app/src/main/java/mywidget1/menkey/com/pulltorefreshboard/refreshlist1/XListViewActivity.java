@@ -2,14 +2,14 @@ package mywidget1.menkey.com.pulltorefreshboard.refreshlist1;
 
 import java.util.ArrayList;
 
-import me.maxwin.view.XListView;
-import me.maxwin.view.XListView.IXListViewListener;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ArrayAdapter;
 
-public class XListViewActivity extends Activity implements IXListViewListener {
+import mywidget1.menkey.com.pulltorefreshboard.R;
+
+public class XListViewActivity extends Activity implements XListView.IXListViewListener {
 	private XListView mListView;
 	private ArrayAdapter<String> mAdapter;
 	private ArrayList<String> items = new ArrayList<String>();

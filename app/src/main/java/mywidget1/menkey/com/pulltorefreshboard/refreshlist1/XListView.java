@@ -8,7 +8,6 @@
  */
 package mywidget1.menkey.com.pulltorefreshboard.refreshlist1;
 
-import me.maxwin.R;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -23,7 +22,9 @@ import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-public class XListView extends ListView implements OnScrollListener {
+import mywidget1.menkey.com.pulltorefreshboard.R;
+
+ public class XListView extends ListView implements OnScrollListener {
 
 
 	private float mLastY = -1; // save event y
