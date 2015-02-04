@@ -189,12 +189,13 @@ import mywidget1.menkey.com.pulltorefreshboard.R;
 		mHeaderTimeView.setText(time);
 	}
 
-	private void invokeOnScrolling() {
-		if (mScrollListener instanceof OnXScrollListener) {
-			OnXScrollListener l = (OnXScrollListener) mScrollListener;
-			l.onXScrolling(this);
-		}
-	}
+// idk the use of this, so try to delete it
+//	private void invokeOnScrolling() {
+//		if (mScrollListener instanceof OnXScrollListener) {
+//			OnXScrollListener l = (OnXScrollListener) mScrollListener;
+//			l.onXScrolling(this);
+//		}
+//	}
 
 	private void updateHeaderHeight(float delta) {
 		mHeaderView.setVisiableHeight((int) delta
@@ -282,7 +283,7 @@ import mywidget1.menkey.com.pulltorefreshboard.R;
 					&& (mHeaderView.getVisiableHeight() > 0 || deltaY > 0)) {
 				// the first item is showing, header has shown or pull down.
 				updateHeaderHeight(deltaY / OFFSET_RADIO);
-				invokeOnScrolling();
+//				invokeOnScrolling();
 			} else if (getLastVisiblePosition() == mTotalItemCount - 1
 					&& (mFooterView.getBottomMargin() > 0 || deltaY < 0)) {
 				// last item, already pulled up or want to pull up.
@@ -325,7 +326,7 @@ import mywidget1.menkey.com.pulltorefreshboard.R;
 				mFooterView.setBottomMargin(mScroller.getCurrY());
 			}
 			postInvalidate();
-			invokeOnScrolling();
+//			invokeOnScrolling();
 		}
 		super.computeScroll();
 	}
