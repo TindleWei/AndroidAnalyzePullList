@@ -4,3 +4,13 @@
 /.idea/libraries
 .DS_Store
 /build
+
+/gen
+/assets
+/bin
+/res
+/.classpath
+/.project
+/AndroidManifest.xml
+/project.properties
+/.gitignore
