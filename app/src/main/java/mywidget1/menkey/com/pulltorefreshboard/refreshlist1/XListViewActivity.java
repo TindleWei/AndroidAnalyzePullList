@@ -1,11 +1,11 @@
 package mywidget1.menkey.com.pulltorefreshboard.refreshlist1;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ArrayAdapter;
+
+import java.util.ArrayList;
 
 import mywidget1.menkey.com.pulltorefreshboard.R;
 
@@ -49,7 +49,7 @@ public class XListViewActivity extends Activity implements XListView.IXListViewL
 		mHandler.postDelayed(new Runnable() {
 			@Override
 			public void run() {
-				start = ++refreshCnt;
+				start = refreshCnt;
 				items.clear();
 				geneItems();
 				// mAdapter.notifyDataSetChanged();
