@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/mac/AndroidStudioProjects/PullToRefreshBoard/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="/Users/mac/AndroidStudioProjects/PullToRefreshBoard/app/build/intermediates/pre-dexed/debug/classes-dfb404e0ea4b2bf858b0f2f24467a10631074638.jar" />
+    </item>
+    <item
+        jar="/Users/mac/AndroidStudioProjects/PullToRefreshBoard/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="/Users/mac/AndroidStudioProjects/PullToRefreshBoard/app/build/intermediates/pre-dexed/debug/classes-7f2258303d015db154d0daa449b2ca0971dd1f85.jar" />
+    </item>
+    <item
+        jar="/Users/mac/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="/Users/mac/AndroidStudioProjects/PullToRefreshBoard/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-21bbc601ad11a12558e7b1976398d24a21eae4da.jar" />
+    </item>
+    <item
+        jar="/Users/mac/AndroidStudioProjects/PullToRefreshBoard/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="/Users/mac/AndroidStudioProjects/PullToRefreshBoard/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-b5534a635df646388901176d3d2742ddc64336c4.jar" />
+    </item>
+
+</items>
