@@ -1,5 +1,5 @@
 Android原理——下拉刷新的多种实现
---------
+---------------------------
 先说4.x的ListView：  
 
 在XListView中，
@@ -43,7 +43,22 @@ OnScrollListener来自android.widget.AbsListView,是一个接口类：
 		}
 	}
 	
-分别在`onTouchEvent`和`computeScroll`中
-当我注释掉`invokeOnScrolling()`，确实出现了异常。  
-异常情况：上拉刷新后，列表前一部分item消失，而后面会出现新的item，item显示的下标相应增加。  
-异常原因：暂时不清楚。
+**当我尝试删除不必要的代码**  
+
++ 在`onTouchEvent`和`computeScroll`中删除`invokeOnScrolling()`,  
+暂时没有任何影响
+
++ 在`initWithContext`中删除 `getViewTreeObserver().removeGlobalOnLayoutListener()`  
+暂时没有任何影响
+  
++ 尝试删除 `mHeaderView.getViewTreeObserver().addOnGlobalLayoutListener{}`  
+出错：下拉刷新不会有停留时间
+
++ 尝试删除 `computeScroll()`中的代码  
+出错：下拉上拉无法调整高度
+
++ 尝试删除`interface OnXScrollListener extends OnScrollListener`  
+可以去掉，影响不大 
+
++ 尝试删除`onScrollStateChanged()`中的代码  
+暂时没有任何影响，但决定先保留着
